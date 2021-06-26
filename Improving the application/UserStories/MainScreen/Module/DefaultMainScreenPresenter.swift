@@ -9,13 +9,17 @@
 import Foundation
 
 final class DefaultMainScreenPresenter {
-
+    
     weak var view: MainScreenView?
-
+    
     init(view: MainScreenView) {
         self.view = view
     }
 }
 
 extension DefaultMainScreenPresenter: MainScreenPresenter {
+    
+    func handle(_ result: [MainScreenBannerModel]) {
+        view?.updateData(result)
+    }
 }

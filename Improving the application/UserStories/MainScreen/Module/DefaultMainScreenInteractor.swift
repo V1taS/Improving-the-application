@@ -9,15 +9,24 @@
 import Foundation
 
 final class DefaultMainScreenInteractor {
-
+    
     let presenter: MainScreenPresenter
-
+    
     init(_ presenter: MainScreenPresenter) {
         self.presenter = presenter
     }
 }
 
 extension DefaultMainScreenInteractor: MainScreenInteractor {
-    func loadedView() {
+    func loadedBaners() {
+        let dispatchGroup = DispatchGroup()
+        
+        dispatchGroup.enter()
+        let getBanners = MainScreenBannerModel.getBannerArray()
+        dispatchGroup.leave()
+        
+        dispatchGroup.notify(queue: .main) {
+            self.presenter.handle(getBanners)
+        }
     }
 }

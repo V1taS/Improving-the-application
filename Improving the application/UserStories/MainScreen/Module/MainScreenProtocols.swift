@@ -9,14 +9,13 @@
 import Foundation
 
 protocol MainScreenInteractor {
-    func loadedView()
+    func loadedBaners()
 }
 
 protocol MainScreenPresenter {
+    func handle(_ result: [MainScreenBannerModel])
 }
 
 protocol MainScreenView: AnyObject {
-}
-
-protocol MainScreenRouter: AnyObject {
+    func updateData(_ viewModel: [MainScreenBannerModel])
 }
