@@ -18,6 +18,8 @@
 		1B140366268780B9007A5150 /* DefaultMainScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B140360268780B9007A5150 /* DefaultMainScreenPresenter.swift */; };
 		1B14036A26878957007A5150 /* MainScreenBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B14036926878957007A5150 /* MainScreenBannerCell.swift */; };
 		1B14036D268789F9007A5150 /* ContainerTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B14036C268789F9007A5150 /* ContainerTableCell.swift */; };
+		1B14037126878EFC007A5150 /* BannerDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B14036F26878EFC007A5150 /* BannerDesign.swift */; };
+		1B14037226878EFC007A5150 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B14037026878EFC007A5150 /* BannerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		1B140360268780B9007A5150 /* DefaultMainScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultMainScreenPresenter.swift; sourceTree = "<group>"; };
 		1B14036926878957007A5150 /* MainScreenBannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenBannerCell.swift; sourceTree = "<group>"; };
 		1B14036C268789F9007A5150 /* ContainerTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerTableCell.swift; sourceTree = "<group>"; };
+		1B14036F26878EFC007A5150 /* BannerDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerDesign.swift; sourceTree = "<group>"; };
+		1B14037026878EFC007A5150 /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 		1B14035626877FD5007A5150 /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				1B14036E26878EE5007A5150 /* BannerView */,
 				1B14036B268789E1007A5150 /* ContainerTableCell */,
 			);
 			path = UIComponents;
@@ -144,6 +149,15 @@
 				1B14036C268789F9007A5150 /* ContainerTableCell.swift */,
 			);
 			path = ContainerTableCell;
+			sourceTree = "<group>";
+		};
+		1B14036E26878EE5007A5150 /* BannerView */ = {
+			isa = PBXGroup;
+			children = (
+				1B14037026878EFC007A5150 /* BannerView.swift */,
+				1B14036F26878EFC007A5150 /* BannerDesign.swift */,
+			);
+			path = BannerView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,10 +232,12 @@
 				1B14036A26878957007A5150 /* MainScreenBannerCell.swift in Sources */,
 				1B14036D268789F9007A5150 /* ContainerTableCell.swift in Sources */,
 				1B140363268780B9007A5150 /* MainScreenProtocols.swift in Sources */,
+				1B14037126878EFC007A5150 /* BannerDesign.swift in Sources */,
 				1B140366268780B9007A5150 /* DefaultMainScreenPresenter.swift in Sources */,
 				1B14034326877994007A5150 /* AppDelegate.swift in Sources */,
 				1B140364268780B9007A5150 /* MainScreenVC.swift in Sources */,
 				1B14034526877994007A5150 /* SceneDelegate.swift in Sources */,
+				1B14037226878EFC007A5150 /* BannerView.swift in Sources */,
 				1B140365268780B9007A5150 /* MainScreenConfigurator.swift in Sources */,
 				1B140362268780B9007A5150 /* DefaultMainScreenInteractor.swift in Sources */,
 			);
