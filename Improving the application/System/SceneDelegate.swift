@@ -14,12 +14,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let scene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: scene)
-        window.overrideUserInterfaceStyle = .light
-        window.rootViewController = ViewController()
-        window.makeKeyAndVisible()
-        self.window = window
+        configureMainVC(window)
     }
-
+    
     func sceneDidDisconnect(_ scene: UIScene) {
     }
 
@@ -39,6 +36,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
        
     }
 
-
+    private func configureMainVC(_ window: UIWindow) {
+        let viewController = MainScreenConfigurator.createModule()
+        window.overrideUserInterfaceStyle = .light
+        window.rootViewController = UINavigationController(rootViewController: viewController)
+        window.makeKeyAndVisible()
+        self.window = window
+    }
 }
 
