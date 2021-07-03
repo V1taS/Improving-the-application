@@ -18,8 +18,7 @@ final class DefaultMainScreenPresenter {
 }
 
 extension DefaultMainScreenPresenter: MainScreenPresenter {
-    
-    func handle(_ result: [MainScreenBannerModel]) {
-        view?.updateData(result)
+    func handle() {
+        view?.updateData()
     }
 }

@@ -13,6 +13,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let scene = (scene as? UIWindowScene) else { return }
+//        FPSCounter.showInStatusBar(windowScene: scene)
         let window = UIWindow(windowScene: scene)
         configureMainVC(window)
     }
@@ -39,9 +40,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private func configureMainVC(_ window: UIWindow) {
         let viewController = MainScreenConfigurator.createModule()
         window.overrideUserInterfaceStyle = .light
-        window.rootViewController = UINavigationController(rootViewController: viewController)
+        window.rootViewController = viewController
         window.makeKeyAndVisible()
         self.window = window
     }
 }
-

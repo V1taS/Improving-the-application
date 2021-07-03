@@ -18,15 +18,7 @@ final class DefaultMainScreenInteractor {
 }
 
 extension DefaultMainScreenInteractor: MainScreenInteractor {
-    func loadedBaners() {
-        let dispatchGroup = DispatchGroup()
-        
-        dispatchGroup.enter()
-        let getBanners = MainScreenBannerModel.getBannerArray()
-        dispatchGroup.leave()
-        
-        dispatchGroup.notify(queue: .main) {
-            self.presenter.handle(getBanners)
-        }
+    func loadedData() {
+        presenter.handle()
     }
 }
